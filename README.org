@@ -3,11 +3,11 @@
 Extended Mito ORM to have validations, mark sensitive slots, auth, etc
 
 See the projects this depends on for usage reference:
-- mito-auth-jzon
-- mito-auth
-- jzon-util
-- cl-sensitive
-- mito-validate 
+- [[https://github.com/daninus14/mito-auth-jzon][mito-auth-jzon]]
+- [[https://github.com/fukamachi/mito-auth][mito-auth]]
+- [[https://github.com/daninus14/jzon-util][jzon-util]]
+- [[https://github.com/daninus14/cl-sensitive][cl-sensitive]]
+- [[https://github.com/daninus14/mito-validate][mito-validate]] 
 
 * Example Usage
 
