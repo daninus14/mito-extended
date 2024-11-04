@@ -2,19 +2,39 @@
  (:class qlot/source/dist:source-dist
   :initargs (:distribution "https://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
   :version "2024-10-12"))
-("log4cl" .
- (:class qlot/source/github:source-github
-  :initargs (:repos "sharplispers/log4cl" :ref nil :branch nil :tag nil)
-  :version "github-fe3da517147d023029782ced7cd989ba24f1e62d"))
 ("log4sly" .
  (:class qlot/source/github:source-github
   :initargs (:repos "40ants/log4sly" :ref nil :branch nil :tag nil)
   :version "github-b229658c7fa8a8ff62cddd832e812cda96b50df6"))
-("mito-validate" .
+("cl-sensitive" .
  (:class qlot/source/github:source-github
-  :initargs (:repos "daninus14/mito-validate" :ref nil :branch nil :tag nil)
-  :version "github-928d070e94e293d0478faa4dee531e69edd37a78"))
+  :initargs (:repos "daninus14/cl-sensitive" :ref nil :branch nil :tag nil)
+  :version "github-3ca5a5ea14854e969af4b253b1dc78ff0b4cae13"))
+("jzon" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "daninus14/jzon" :ref nil :branch "metaclass-extensibility" :tag nil)
+  :version "github-b7fb3b97549957de27692c64871999c4cbd27d94"))
+("jzon-util" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "daninus14/jzon-util" :ref nil :branch nil :tag nil)
+  :version "github-a8911a5fb7c3897521caacffb6ea31110f8b5a69"))
+("mito" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "daninus14/mito" :ref nil :branch "dn-develop" :tag nil)
+  :version "github-14ef86774b044224a7206e58349dffe5e7fecbf9"))
 ("mito-auth-jzon" .
  (:class qlot/source/github:source-github
   :initargs (:repos "daninus14/mito-auth-jzon" :ref nil :branch nil :tag nil)
   :version "github-4f89e7e346e3a835a1151b5de1104b6975e0c6c8"))
+("mito-validate" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "daninus14/mito-validate" :ref nil :branch nil :tag nil)
+  :version "github-131e2fe280f202b429bbcf468940123d6459c32d"))
+("mito-auth" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "fukamachi/mito-auth" :ref nil :branch nil :tag nil)
+  :version "github-1105f1cd3314f71677b969b7d553bcb8e3adc1e5"))
+("log4cl" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "sharplispers/log4cl" :ref nil :branch nil :tag nil)
+  :version "github-fe3da517147d023029782ced7cd989ba24f1e62d"))

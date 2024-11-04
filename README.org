@@ -1,1 +1,4 @@
-# mito-extended
+* mito-extended
+
+Extended Mito ORM to have validations, mark sensitive slots, auth, etc
+
