@@ -1,0 +1,20 @@
+("quicklisp" .
+ (:class qlot/source/dist:source-dist
+  :initargs (:distribution "https://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "2024-10-12"))
+("log4cl" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "sharplispers/log4cl" :ref nil :branch nil :tag nil)
+  :version "github-fe3da517147d023029782ced7cd989ba24f1e62d"))
+("log4sly" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "40ants/log4sly" :ref nil :branch nil :tag nil)
+  :version "github-b229658c7fa8a8ff62cddd832e812cda96b50df6"))
+("mito-validate" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "daninus14/mito-validate" :ref nil :branch nil :tag nil)
+  :version "github-928d070e94e293d0478faa4dee531e69edd37a78"))
+("mito-auth-jzon" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "daninus14/mito-auth-jzon" :ref nil :branch nil :tag nil)
+  :version "github-4f89e7e346e3a835a1151b5de1104b6975e0c6c8"))
