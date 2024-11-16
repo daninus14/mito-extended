@@ -25,13 +25,25 @@
                                    foreign-model-slots))
                (closer-mop:class-slots class))))
 
+(defun booleanp (x)
+  "Checks if X is explicitly a boolean value (T or NIL)."
+  (or (eq x t) (eq x nil)))
+
 (defun add-non-foreign-model-slots-to-object (object ht)
   (loop for slot in (get-non-foreign-model-slots (class-of object))
         for slot-name = (closer-mop:slot-definition-name slot)
-        for slot-key = (str:downcase (symbol-name slot-name))
+        for slot-key = (symbol-name slot-name)
         do (multiple-value-bind (value found) (gethash slot-key ht)
-             (when found
-               (setf (slot-value object slot-name) value))))
+             (when (and found
+                        (not (str:ends-with-p "-P" slot-key))
+                        (or (not (str:ends-with-p "-ID" slot-key))
+                            (numberp (parse-integer value :junk-allowed t))))
+               (setf (slot-value object slot-name) value))
+             (when (and found
+                        (str:ends-with-p "-P" slot-key))
+               (if (string= "true" value)
+                   (setf (slot-value object slot-name) t)
+                   (setf (slot-value object slot-name) nil)))))
   object)
 
 (defun create-mito-wo-foreign (class ht)
